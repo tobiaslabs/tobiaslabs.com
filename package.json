@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "echo no build yet"
+    "dev": "sirv --dev --port 3000 public"
+  },
+  "devDependencies": {
+    "sirv-cli": "^2.0.2"
   }
 }

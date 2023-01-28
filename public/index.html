@@ -2,32 +2,117 @@
 <html>
 	<head>
 		<title>Tobias Labs</title>
+		<link rel="preconnect" href="https://fonts.bunny.net">
+		<link href="https://fonts.bunny.net/css?family=pt-serif:400" rel="stylesheet" />
 		<style type="text/css">
+		body {
+			background-color: #f8f5f3;
+			font-family: 'PT Serif', Georgia, Lucida Bright, serif;
+		}
 		.wrapper {
-			position: absolute;
-			top: 50%;
-			left: 50%;
+			margin: 0 auto;
+			max-width: 40em;
+		}
+		.banner {
+			text-align: center;
+			margin-top: 2em;
+			display: flex;
+			align-items: center;
+		}
+		img {
+			width: 8em;
+			height: 8em;
+			margin-right: 1em;
 		}
 		h1 {
 			font-size: 4em;
-			font-family: Helvetica Neue, Helvetica, Georgia, Lucida Bright, monospace;
+			font-family: 'PT Serif', Georgia, Lucida Bright, serif;
 			text-transform: uppercase;
-			letter-spacing: 0.05em;
-			word-spacing: 0.2em;
+			margin: 0;
+		}
+		main {
+			font-size: 1.5em;
+		}
+		form {
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			background-color: #fff;
 			text-align: center;
-			position: absolute;
-			left: -10em;
-			top: -2em;
-			width: 20em;
+			padding: 0 1em;
+		}
+		form p {
+			margin: 0.6em 0;
+		}
+		form label {
+			font-size: 0.9em;
+		}
+		input.control {
+			width: 16em;
+			padding: 0.2em 0.4em;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 1em;
+		}
+		input.control.submit {
+			background-color: #0055aa;
+			color: #fff;
+		}
+		form small {
+			font-size: 0.7em;
 		}
 		</style>
 	</head>
 	<body>
+		<div class="wrapper banner">
+			<img src="/tl-512.png">
+			<h1>Tobias Labs</h1>
+		</div>
 		<div class="wrapper">
-			<h1>
-				Tobias Labs
-				<small><a href="https://github.com/tobiaslabs">GitHub⤴</a></small>
-			</h1>
+			<main>
+				<p>
+					Among other things, we maintain the following software libraries:
+				</p>
+				<ul>
+					<li>
+						<a href="https://hunchjs.com">HunchJS</a> - Compiled search for static Markdown files.
+					</li>
+					<li>
+						<a href="https://oamerge.com/">OA Merge</a> - Merge and share OpenAPI endpoints and schemas.
+					</li>
+				</ul>
+				<p>
+					You can access all other public libraries on <a href="https://github.com/tobiaslabs">GitHub</a>.
+				</p>
+				<p>
+					To stay up to date with library development and other business news, you can subscribe to
+					our newsletter. Updates occur when there are notable library updates, and may include requests
+					for feedback from library users.
+				</p>
+				<form
+					action="https://tinyletter.com/tobiaslabs"
+					method="post"
+					target="popupwindow"
+					onsubmit="window.open('https://tinyletter.com/tobiaslabs','popupwindow','scrollbars=yes,width=800,height=600');return true"
+				>
+					<p><label for="tlemail">Enter your email address</label></p>
+					<p><input type="text" name="email" class="control" id="tlemail" /></p>
+					<input type="hidden" value="1" name="embed"/>
+					<p><input type="submit" class="control submit" value="Subscribe"></p>
+					<p>
+						<small>
+							<a href="https://tinyletter.com" target="_blank">Powered by TinyLetter</a>
+						</small>
+					</p>
+				</form>
+			</main>
+		</div>
+		<div class="wrapper">
+			<footer>
+				<hr>
+				<p>
+					Tobias Labs, LLC © 2019-2023
+				</p>
+			</footer>
 		</div>
 	</body>
 </html>
